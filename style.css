@@ -69,8 +69,11 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color:#01210b;
+            color:#5ea1c9;
             text-decoration: underline;
+            text-align:left;
+            
+            
         }
         
         .header-nav {
@@ -117,8 +120,7 @@
             text-align: center;
             padding: 80px 20px;
             /* UPDATED: Made background consistent with blue color scheme */
-                background: linear-gradient(151deg, #1a4d10, #005703);
-            color: var(--light-text-color);
+                background: linear-gradient(151deg, #3b9f9a, #64abbb);
         }
 
         .hero h1 {
@@ -139,9 +141,11 @@
         /* --- Social Links --- */
         /* ------------------------- */
         .social-links {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #EBF7FF;
+               text-align: center;
+                padding: 20px 0;
+                
+                display: flex;
+               justify-content: center;
         }
 
         .social-links a {
@@ -225,6 +229,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 50px;
+            margin-bottom:55px;
         }
         
         .media-item {
@@ -348,7 +353,7 @@
         /* ------------------------- */
         .cta-section {
             text-align: center;
-               background: linear-gradient(135deg, #1c6f29, #106d2d);
+               background: linear-gradient(135deg, #64d1d1, #477fb9);
             padding: 60px 20px;
         }
         
@@ -493,9 +498,9 @@
         /* --- Footer --- */
         /* ------------------------- */
         .footer {
-            margin-top: 50px;
+            /*margin-top: 50px;*/
             padding: 40px 20px;
-            background-color: var(--text-color);
+            background-color: #031c3c;
             color: #adb5bd;
         }
         
@@ -532,4 +537,23 @@
         .hidden {
             display: none !important;
         }
+        .fa-tiktok {
+            color:black;
+               
 
+
+
+        }
+        .fa-instagram{
+            color:hotpink;
+        }
+
+ }
+        .fa-facebook{
+            color:hotpink;
+        }
+
+ }
+        .fa-whatsapp .social-links a{
+    color: green, !important;
+}
