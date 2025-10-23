@@ -2,162 +2,389 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>World of Shine - Professional Cleaning Services</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="img/logo.jpg" alt="World of Shine Logo" />
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+  <header class="main-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="logo.jpg" alt="World of Shine Logo" />
+      </a>
+
+      <nav class="header-nav" id="headerNav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#why-choose-us">Why Choose Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+        <div class="header-buttons">
+          <button
+            id="topLeftSignUpBtn"
+            class="btn secondary"
+            data-modal-target="signUpModal"
+          >
+            Sign Up
+          </button>
+          <button id="logoutBtn" class="btn hidden">Logout</button>
         </div>
-    </header>
+      </nav>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Impeccable Cleaning for a Brighter Space</h1>
-                <p>Reliable, professional, and eco-friendly cleaning services in the UAE.</p>
-                <a href="#services" class="btn btn-primary">Explore Our Services</a>
-            </div>
-        </section>
+      <button
+        class="mobile-nav-toggle"
+        id="mobileNavToggle"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
 
-        <section id="services" class="container section">
-            <h2 class="section-title">Our Competitive Rates</h2>
-            <div class="services-grid">
-                <details class="service-card">
-                    <summary>Sharjah & Ajman Rates</summary>
-                    <div class="card-content">
-                        <p>2 hours: 50 AED</p>
-                        <p>3 hours: 65 AED</p>
-                        <p>4 hours: 80 AED</p>
-                    </div>
-                </details>
-                <details class="service-card">
-                    <summary>Dubai Rates</summary>
-                    <div class="card-content">
-                        <p>2 hours: 60 AED</p>
-                        <p>3 hours: 80 AED</p>
-                        <p>4 hours: 100 AED</p>
-                    </div>
-                </details>
-                <details class="service-card">
-                    <summary>Monthly Packages</summary>
-                    <div class="card-content">
-                        <p><strong>Basic:</strong> 8 visits/month (2hr) - 320 AED</p>
-                        <p><strong>Standard:</strong> 12 visits/month (2hr) - 480 AED</p>
-                        <p><strong>Plus:</strong> 12 visits/month (3hr) - 720 AED</p>
-                        <p><strong>Premium:</strong> 26 visits/month (2hr) - 1,040 AED</p>
-                    </div>
-                </details>
-            </div>
-        </section>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1><marquee scrollamount="28" direction="right">Welcome to World of Shine</marquee></h1>
+        <p>Your Premier Cleaning Service for a Spotless Space</p>
+      </div>
+    </section>
 
-        <section id="about" class="container section">
-            <h2 class="section-title">Why Choose World of Shine?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fas fa-user-shield"></i>
-                    <h3>Vetted & Insured Staff</h3>
-                    <p>Our team is background-checked and professionally trained for your peace of mind.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-star"></i>
-                    <h3>Satisfaction Guarantee</h3>
-                    <p>We're not happy unless you are. We'll come back and make it right.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Eco-Friendly Products</h3>
-                    <p>We use safe, non-toxic supplies to protect your family and pets.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="section">
-            <div class="container">
-                <h2 class="section-title">Our Work in Pictures</h2>
-                <div class="gallery-grid">
-                    <img src="img/i2.png" alt="Woman in hijab cleaning an office desk" />
-                    <img src="img/i3.png" alt="Cleaner wiping down an office desk" />
-                    <img src="img/i4.png" alt="Cleaner in a kitchen wiping a range hood" />
-                    <img src="img/i5.png" alt="Two cleaners mopping a living room floor" />
-                </div>
-            </div>
-        </section>
-
-        <section id="videos" class="container section">
-            <h2 class="section-title">See Us in Action</h2>
-            <div class="videos-grid">
-                <div class="video-card">
-                    <video controls poster="img/i1.png">
-                        <source src="video/video.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <h3>Deep Cleaning - Living Room</h3>
-                </div>
-                 <div class="video-card">
-                    <video controls poster="img/i3.png">
-                        <source src="video/j4.webm" type="video/webm" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <h3>Office Sanitization</h3>
-                </div>
-                 <div class="video-card">
-                    <video controls poster="img/i4.png">
-                        <source src="video/j3.webm" type="video/webm" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <h3>After Party Clean-up</h3>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <h2>Ready for a Spotless Space?</h2>
-                <p>Get an instant quote and book your service in under 60 seconds.</p>
-                <a href="contact.html" class="btn btn-light">Book Our Services Today</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 World of Shine. All Rights Reserved.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/world_of_shine810/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@world.of.shine.cl?lang=en" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61574581764671" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/971568260687" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
+    <section class="social-links-section">
+      <div class="container">
+        <div class="social-links">
+            <a
+              href="https://www.instagram.com/world_of_shine810/"
+              target="_blank"
+              title="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@world.of.shine.cl?lang=en"
+              target="_blank"
+              title="TikTok"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61574581764671"
+              target="_blank"
+              title="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://wa.me/971568260687"
+              target="_blank"
+              title="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-        const mainNav = document.querySelector('.main-nav');
+    <section id="services" class="container">
+      <h2>Our Competitive Rates</h2>
+      <div class="services-grid">
+        <details class="service-card">
+          <summary>Sharjah Rates</summary>
+          <div class="card-content">
+            <p>2 hours: 50 AED<br />3 hours: 65 AED<br />4 hours: 80 AED</p>
+          </div>
+        </details>
+        <details class="service-card">
+          <summary>Ajman Rates</summary>
+          <div class="card-content">
+            <p>2 hours: 50 AED<br />3 hours: 65 AED<br />4 hours: 80 AED</p>
+          </div>
+        </details>
+        <details class="service-card">
+          <summary>Dubai Rates</summary>
+          <div class="card-content">
+            <p>2 hours: 60 AED<br />3 hours: 80 AED<br />4 hours: 100 AED</p>
+          </div>
+        </details>
+        <details class="service-card">
+          <summary>Monthly Cleaning Packages</summary>
+          <div class="card-content package-details">
+            <strong>Basic:</strong> 8 visits/month (2hr) - 320 AED<br />
+            <strong>Standard:</strong> 12 visits/month (2hr) - 480 AED<br />
+            <strong>Plus:</strong> 12 visits/month (3hr) - 720 AED<br />
+            <strong>Premium:</strong> 26 visits/month (2hr) - 1,040 AED
+          </div>
+        </details>
+      </div>
+    </section>
 
-        mobileNavToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-        });
-    </script>
+    <section id="why-choose-us" class="container">
+      <h2>Why Choose Us?</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-user-shield"></i>
+          <h3>Vetted & Insured Staff</h3>
+          <p>
+            Our team is background-checked, professionally trained, and fully
+            insured for your peace of mind.
+          </p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-star"></i>
+          <h3>Satisfaction Guarantee</h3>
+          <p>
+            We're not happy unless you are. If you're not satisfied, we'll come
+            back and make it right.
+          </p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-leaf"></i>
+          <h3>Eco-Friendly Products</h3>
+          <p>
+            We use safe, non-toxic, and environmentally friendly cleaning
+            supplies to protect your family and pets.
+          </p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Flexible Scheduling</h3>
+          <p>
+            Book online anytime. We offer one-time, weekly, bi-weekly, or monthly
+            services to fit your life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="container">
+      <h2>✨ Our Work Gallery</h2>
+      <div class="media-grid">
+        <div class="media-item">
+          <img
+            src="i2.png"
+            alt="Woman in hijab cleaning an office desk"
+          />
+        </div>
+        <div class="media-item">
+          <img
+            src="i3.png"
+            alt="Cleaner wiping down an office desk"
+          />
+        </div>
+        <div class="media-item">
+          <img src="i4.png" alt="Cleaner in a kitchen wiping a range hood" />
+        </div>
+        <div class="media-item">
+          <img src="i5.png" alt="Two cleaners mopping a living room floor" />
+        </div>
+        <div class="media-item">
+          <img
+            src="https://media.istockphoto.com/id/1055221704/photo/young-woman-washing-window.jpg?s=1024x1024&w=is&k=20&c=SkwsHfYsSS1Fm8DLPE65RQ1crDosut6XdTtNVuYGmt0="
+            alt="Close-up of a cleaning spray bottle"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>
+            World of Shine transformed our apartment! We came home to a spotless
+            space. The attention to detail in the kitchen and bathrooms was
+            incredible. Highly recommend their service.
+          </p>
+          <div class="testimonial-author">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+              alt="Sarah K."
+            />
+            <div class="author-info">
+              <strong>Sarah K.</strong>
+              <span>Dubai Resident</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>
+            We use their monthly package for our office. The team is always on
+            time, professional, and does a thorough job. It's great to know our
+            workspace is always clean and sanitized.
+          </p>
+          <div class="testimonial-author">
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop"
+              alt="Ahmed R."
+            />
+            <div class="author-info">
+              <strong>Ahmed R.</strong>
+              <span>Office Manager, Sharjah</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>
+            Booking was so easy, and the price was very competitive. The cleaners
+            were friendly and efficient. I've already scheduled my next deep
+            clean with them!
+          </p>
+          <div class="testimonial-author">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+              alt="Fatima A."
+            />
+            <div class="author-info">
+              <strong>Fatima A.</strong>
+              <span>Ajman Homeowner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="container">
+      <h2>🎥 Our Cleaning in Action</h2>
+      <div class="media-grid">
+        <div class="media-item video-card">
+          <video controls poster="i1.png">
+            <source src="video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-title">Deep Cleaning - Living Room</div>
+        </div>
+        <div class="media-item video-card">
+          <video
+            controls
+            poster="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=600&h=440&fit=crop"
+          >
+            <source src="j4.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-title">Office Sanitization</div>
+        </div>
+        <div class="media-item video-card">
+          <video
+            controls
+            poster="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=440&fit=crop"
+          >
+            <source src="j3.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-title">After Party Clean-up</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready for a Spotless Space?</h2>
+        <p
+          style="color: #f1f1f1; font-size: 1.1rem; margin-bottom: 30px;"
+        >
+          Get an instant quote and book your service in under 60 seconds.
+        </p>
+        <button
+          id="ctaBookBtn"
+          class="btn cta-btn"
+          data-modal-target="bookingModal"
+        >
+          Book Our Services Today
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#why-choose-us">Why Choose Us</a>
+          <a href="#testimonials">Testimonials</a>
+        </div>
+        <p>&copy; 2025 World of Shine. All Rights Reserved.</p>
+        <p>Directed By Muhammad Azan Azam</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="signUpModal">
+    <div class="modal-content">
+      <button class="close-btn" data-modal-close>&times;</button>
+      <h2>Create Your Account</h2>
+      <form id="signUpForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-content">
+      <button class="close-btn" data-modal-close>&times;</button>
+      <h2>Request a Booking</h2>
+      <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+        <div class="form-group">
+          <label for="bookName">Name</label>
+          <input type="text" id="bookName" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="bookPhone">Phone</label>
+          <input
+            type="tel"
+            id="bookPhone"
+            placeholder="Your phone number"
+            pattern="[0-9+ ]{6,}"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="bookService">Service</label>
+          <select id="bookService" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="Home Cleaning">Home Cleaning</option>
+            <option value="Office Cleaning">Office Cleaning</option>
+            <option value="Deep Cleaning">Deep Cleaning</option>
+            <option value="Monthly Package">Monthly Package</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="bookDate">Date</label>
+          <input type="date" id="bookDate" required />
+        </div>
+        <div class="form-group">
+          <label for="bookNotes">Address & Notes</label>
+          <textarea
+            id="bookNotes"
+            placeholder="Your address or additional notes"
+            rows="3"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn">Request Booking</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
