@@ -1,5 +1,4 @@
-
-
+document.addEventListener("DOMContentLoaded", () => {
     // Modal open/close logic
     document.querySelectorAll("[data-modal-target]").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -18,12 +17,15 @@
     const mobileNavToggle = document.getElementById("mobileNavToggle");
     const headerNav = document.getElementById("headerNav");
 
-    mobileNavToggle.addEventListener("click", () => {
-      headerNav.classList.toggle("active");
-    });
+    if(mobileNavToggle) {
+        mobileNavToggle.addEventListener("click", () => {
+            headerNav.classList.toggle("active");
+          });
+    }
+
 
     // WhatsApp booking function
-    function sendToWhatsApp(event) {
+    window.sendToWhatsApp = function(event) {
       event.preventDefault();
 
       const name = document.getElementById("bookName").value.trim();
@@ -52,3 +54,18 @@
       // Close booking modal after sending
       document.getElementById("bookingModal").classList.remove("active");
     }
+
+    // Theme switcher
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if(themeToggle) {
+        themeToggle.addEventListener('change', function() {
+            if(this.checked) {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        });
+    }
+});

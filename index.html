@@ -17,44 +17,53 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="main-header">
-    <div class="container">
-      <a href="#" class="logo">
-        <img src="img/logo.jpg" alt="World of Shine Logo" />
-      </a>
-
-      <nav class="header-nav" id="headerNav">
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#why-choose-us">Why Choose Us</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-        </ul>
-        <div class="header-buttons">
+    <header class="main-header">
+        <div class="container">
+          <a href="index.html" class="logo">
+            <img src="img/logo.jpg" alt="World of Shine Logo" />
+          </a>
+    
+          <nav class="header-nav" id="headerNav">
+            <ul>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="commercial.html">Commercial</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-buttons">
+              <button
+                id="topLeftSignUpBtn"
+                class="btn secondary"
+                data-modal-target="signUpModal"
+              >
+                Sign Up
+              </button>
+              <button id="logoutBtn" class="btn hidden">Logout</button>
+            </div>
+          </nav>
+          
+          <div class="theme-switcher">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+            <label for="theme-toggle" class="theme-toggle-label"></label>
+          </div>
+    
           <button
-            id="topLeftSignUpBtn"
-            class="btn secondary"
-            data-modal-target="signUpModal"
+            class="mobile-nav-toggle"
+            id="mobileNavToggle"
+            aria-label="Toggle navigation"
           >
-            Sign Up
+            <i class="fas fa-bars"></i>
           </button>
-          <button id="logoutBtn" class="btn hidden">Logout</button>
         </div>
-      </nav>
+      </header>
 
-      <button
-        class="mobile-nav-toggle"
-        id="mobileNavToggle"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
-
-  <main>
+    <main>
     <section class="hero">
       <div class="container">
         <h1><marquee scrollamount="28" direction="right">Welcome to World of Shine</marquee></h1>
@@ -330,128 +339,33 @@
 
 
 <section id="commercial" class="container">
-  <h2>🏢 Commercial Cleaning</h2>
-  <p>We offer full cleaning solutions for offices, schools, showrooms, and clinics.</p>
-  <ul>
-    <li>Office & Workspace Sanitization</li>
-    <li>Glass & Window Cleaning</li>
-    <li>Carpet & Floor Maintenance</li>
-    <li>After-Event Cleaning</li>
-  </ul>
-</section>
+            <h2>🏢 Commercial Cleaning</h2>
+            <p>We offer full cleaning solutions for offices, schools, showrooms, and clinics.</p>
+            <ul>
+              <li>Office & Workspace Sanitization</li>
+              <li>Glass & Window Cleaning</li>
+              <li>Carpet & Floor Maintenance</li>
+              <li>After-Event Cleaning</li>
+            </ul>
+          </section>
+    </main>
 
-<div class="about">
-<section id="about" class="container">
-  <h2>About World of Shine</h2>
-  <p>
-    World of Shine is a UAE-based cleaning company providing premium home and office cleaning services.
-    Our mission is to make every space spotless, fresh, and welcoming using eco-friendly methods.
-  </p>
-  <img src="team-photo.jpg" alt="World of Shine cleaning team">
-</section>
-</div> 
-
-    <section class="cta-section">
-      <div class="container">
-        <h2>Ready for a Spotless Space?</h2>
-        <p
-          style="color: #f1f1f1; font-size: 1.1rem; margin-bottom: 30px;"
-        >
-          Get an instant quote and book your service in under 60 seconds.
-        </p>
-        <button
-          id="ctaBookBtn"
-          class="btn cta-btn"
-          data-modal-target="bookingModal"
-        >
-          Book Our Services Today
-        </button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-container">
-        <div class="footer-links">
-          <a href="#services">Services</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#why-choose-us">Why Choose Us</a>
-          <a href="#testimonials">Testimonials</a>
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About Us</a>
+                <a href="commercial.html">Commercial</a>
+                <a href="faq.html">FAQ</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 World of Shine. All Rights Reserved.</p>
+            <p>Directed By Muhammad Azan Azam</p>
+          </div>
         </div>
-        <p>&copy; 2025 World of Shine. All Rights Reserved.</p>
-        <p>Directed By Muhammad Azan Azam</p>
-      </div>
-    </div>
-  </footer>
-
-  <div class="modal-overlay" id="signUpModal">
-    <div class="modal-content">
-      <button class="close-btn" data-modal-close>&times;</button>
-      <h2>Create Your Account</h2>
-      <form id="signUpForm">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" required />
-        </div>
-        <button type="submit" class="btn">Sign Up</button>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="bookingModal">
-    <div class="modal-content">
-      <button class="close-btn" data-modal-close>&times;</button>
-      <h2>Request a Booking</h2>
-      <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
-        <div class="form-group">
-          <label for="bookName">Name</label>
-          <input type="text" id="bookName" placeholder="Your full name" required />
-        </div>
-        <div class="form-group">
-          <label for="bookPhone">Phone</label>
-          <input
-            type="tel"
-            id="bookPhone"
-            placeholder="Your phone number"
-            pattern="[0-9+ ]{6,}"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="bookService">Service</label>
-          <select id="bookService" required>
-            <option value="" disabled selected>Select a service</option>
-            <option value="Home Cleaning">Home Cleaning</option>
-            <option value="Office Cleaning">Office Cleaning</option>
-            <option value="Deep Cleaning">Deep Cleaning</option>
-            <option value="Monthly Package">Monthly Package</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="bookDate">Date</label>
-          <input type="date" id="bookDate" required />
-        </div>
-        <div class="form-group">
-          <label for="bookNotes">Address & Notes</label>
-          <textarea
-            id="bookNotes"
-            placeholder="Your address or additional notes"
-            rows="3"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn">Request Booking</button>
-      </form>
-    </div>
-  </div>
-  <script src="script.js"></script>
+      </footer>
+      <script src="script.js"></script>
 </body>
 </html>
