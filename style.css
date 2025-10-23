@@ -182,7 +182,7 @@ section {
 /* --- Header --- */
 /* ------------------------- */
 .main-header {
-    background-color: var(--surface-color);
+    background-color: #031c3cd4;
     padding: 15px 0;
     border-bottom: 1px solid #e9ecef;
     position: sticky;
