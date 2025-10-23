@@ -21,7 +21,28 @@
 <body>
   <header class="main-header">
     <div class="container">
-      <a href="#" class="logo">World OFF Shine</a>
+      <a href="#" class="logo">
+        <img src="logo.jpg" alt="World of Shine Logo" />
+      </a>
+
+      <nav class="header-nav" id="headerNav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#why-choose-us">Why Choose Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+        <div class="header-buttons">
+          <button
+            id="topLeftSignUpBtn"
+            class="btn secondary"
+            data-modal-target="signUpModal"
+          >
+            Sign Up
+          </button>
+          <button id="logoutBtn" class="btn hidden">Logout</button>
+        </div>
+      </nav>
 
       <button
         class="mobile-nav-toggle"
@@ -30,60 +51,47 @@
       >
         <i class="fas fa-bars"></i>
       </button>
-
-      <nav class="header-nav" id="headerNav">
-        <button
-          id="topLeftSignUpBtn"
-          class="btn secondary"
-          data-modal-target="signUpModal"
-        >
-          Sign Up
-        </button>
-        <button id="logoutBtn" class="btn hidden">Logout</button>
-      </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <h1><marquee scrollamount="28" direction="right">Welcome to World of Shine</marquee></h1>
-      <p>Your Premier Cleaning Service for a Spotless Space</p>
+      <div class="container">
+        <h1><marquee scrollamount="28" direction="right">Welcome to World of Shine</marquee></h1>
+        <p>Your Premier Cleaning Service for a Spotless Space</p>
+      </div>
     </section>
 
-    <nav class="social-links">
-      <div class="instragram">
-        <a
-          href="https://www.instagram.com/world_of_shine810/"
-          target="_blank"
-          title="Instagram"
-          ><i class="fab fa-instagram"></i
-        ></a>
+    <section class="social-links-section">
+      <div class="container">
+        <div class="social-links">
+            <a
+              href="https://www.instagram.com/world_of_shine810/"
+              target="_blank"
+              title="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@world.of.shine.cl?lang=en"
+              target="_blank"
+              title="TikTok"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61574581764671"
+              target="_blank"
+              title="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://wa.me/971568260687"
+              target="_blank"
+              title="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+        </div>
       </div>
-      <div class="tiktok">
-        <a
-          href="https://www.tiktok.com/@world.of.shine.cl?lang=en"
-          target="_blank"
-          title="TikTok"
-          ><i class="fab fa-tiktok"></i
-        ></a>
-      </div>
-      <div class="facebook">
-        <a
-          href="https://www.facebook.com/profile.php?id=61574581764671"
-          target="_blank"
-          title="Facebook"
-          ><i class="fab fa-facebook"></i
-        ></a>
-      </div>
-      <div class="whatsApp">
-        <a
-          href="https://wa.me/971568260687"
-          target="_blank"
-          title="WhatsApp"
-          ><i class="fab fa-whatsapp"></i
-        ></a>
-      </div>
-    </nav>
+    </section>
 
     <section id="services" class="container">
       <h2>Our Competitive Rates</h2>
@@ -147,6 +155,7 @@
         </div>
         <div class="feature-item">
           <i class="fas fa-calendar-alt"></i>
+          <h3>Flexible Scheduling</h3>
           <p>
             Book online anytime. We offer one-time, weekly, bi-weekly, or monthly
             services to fit your life.
@@ -295,15 +304,17 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-links">
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#why-choose-us">Why Choose Us</a>
-        <a href="#testimonials">Testimonials</a>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#why-choose-us">Why Choose Us</a>
+          <a href="#testimonials">Testimonials</a>
+        </div>
+        <p>&copy; 2025 World of Shine. All Rights Reserved.</p>
+        <p>Directed By Muhammad Azan Azam</p>
       </div>
-      <p>&copy; 2025 World of Shine. All Rights Reserved.</p>
-      <p>Directed By Muhammad Azan Azam</p>
     </div>
   </footer>
 
@@ -329,7 +340,6 @@
     </div>
   </div>
 
-  <!-- Booking Modal with WhatsApp integration -->
   <div class="modal-overlay" id="bookingModal">
     <div class="modal-content">
       <button class="close-btn" data-modal-close>&times;</button>
