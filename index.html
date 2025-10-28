@@ -8,17 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
     <header class="main-header">
@@ -37,14 +34,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="header-buttons">
-              <button
-                id="topLeftSignUpBtn"
-                class="btn secondary"
-                data-modal-target="signUpModal"
-              >
-                Sign Up
-              </button>
-              <button id="logoutBtn" class="btn hidden">Logout</button>
+              <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
           </nav>
           
@@ -64,40 +54,20 @@
       </header>
 
     <main>
+    
     <section class="hero">
       <div class="container">
-        <h1><marquee scrollamount="28" direction="right">Welcome to World of Shine</marquee></h1>
-        <p>Your Premier Cleaning Service for a Spotless Space</p>
-      </div>
-    </section>
-
-    <section class="social-links-section">
-      <div class="container">
-        <div class="social-links">
-            <a
-              href="https://www.instagram.com/world_of_shine810/"
-              target="_blank"
-              title="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://www.tiktok.com/@world.of.shine.cl?lang=en"
-              target="_blank"
-              title="TikTok"
-              ><i class="fab fa-tiktok"></i
-            ></a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61574581764671"
-              target="_blank"
-              title="Facebook"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a
-              href="https://wa.me/971568260687"
-              target="_blank"
-              title="WhatsApp"
-              ><i class="fab fa-whatsapp"></i
-            ></a>
+        <div class="hero-content">
+          <h1>Your Premier Cleaning Service for a Spotless Space</h1>
+          <p class="subtitle">
+            Reliable, professional, and eco-friendly cleaning for homes and
+            offices in Dubai, Sharjah & Ajman.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Request a Booking</a>
+          <a href="index.html#services" class="btn secondary">View Rates</a>
+        </div>
+        <div class="hero-image">
+          <img src="img/i5.png" alt="Two cleaners mopping a living room floor" />
         </div>
       </div>
     </section>
@@ -105,47 +75,33 @@
     <section id="services" class="container">
       <h2>Our Competitive Rates</h2>
       <div class="services-grid">
-        <details class="service-card">
-          <summary>Sharjah Rates</summary>
-          <div class="card-content">
-            <p>2 hours: 50 AED<br />3 hours: 65 AED<br />4 hours: 80 AED</p>
+        <div class="service-card">
+          <h3>Sharjah Rates</h3>
+          <p>2 hours: 50 AED<br />3 hours: 65 AED<br />4 hours: 80 AED</p>
+        </div>
+        <div class="service-card">
+          <h3>Ajman Rates</h3>
+          <p>2 hours: 50 AED<br />3 hours: 65 AED<br />4 hours: 80 AED</p>
+        </div>
+        <div class="service-card">
+          <h3>Dubai Rates</h3>
+          <p>2 hours: 60 AED<br />3 hours: 80 AED<br />4 hours: 100 AED</p>
+        </div>
+        <div class="service-card">
+          <h3>Monthly Packages</h3>
+          <div class="package-details">
+            <p>
+              <strong>Basic:</strong> 8 visits/month (2hr) - 320 AED<br />
+              <strong>Standard:</strong> 12 visits/month (2hr) - 480 AED<br />
+              <strong>Plus:</strong> 12 visits/month (3hr) - 720 AED<br />
+              <strong>Premium:</strong> 26 visits/month (2hr) - 1,040 AED
+            </p>
           </div>
-        </details>
-        <details class="service-card">
-          <summary>Ajman Rates</summary>
-          <div class="card-content">
-            <p>2 hours: 50 AED<br />3 hours: 65 AED<br />4 hours: 80 AED</p>
-          </div>
-        </details>
-        <details class="service-card">
-          <summary>Dubai Rates</summary>
-          <div class="card-content">
-            <p>2 hours: 60 AED<br />3 hours: 80 AED<br />4 hours: 100 AED</p>
-          </div>
-        </details>
-        <details class="service-card">
-          <summary>Monthly Cleaning Packages</summary>
-          <div class="card-content package-details">
-            <strong>Basic:</strong> 8 visits/month (2hr) - 320 AED<br />
-            <strong>Standard:</strong> 12 visits/month (2hr) - 480 AED<br />
-            <strong>Plus:</strong> 12 visits/month (3hr) - 720 AED<br />
-            <strong>Premium:</strong> 26 visits/month (2hr) - 1,040 AED
-          </div>
-        </details>
+        </div>
       </div>
     </section>
 
-    <div class="change-before-after">
-    <section id="before-after" class="container">
-  <h2>Before & After</h2>
-  <div class="before-after">
-    <img src="before.png" height="200px" widht="200px" alt="Before Cleaning" class="before">
-    <img src="after.png"height="200px" widht="200px" alt="After Cleaning" class="after">
-  </div>
-</div> 
-</section>
-
-    <section id="why-choose-us" class="container">
+    <section id="why-choose-us" class="container section">
       <h2>Why Choose Us?</h2>
       <div class="features-grid">
         <div class="feature-item">
@@ -183,13 +139,13 @@
       </div>
     </section>
 
-    <section id="gallery" class="container">
+    <section id="gallery" class="container section">
       <h2>✨ Our Work Gallery</h2>
       <div class="media-grid">
         <div class="media-item">
           <img
             src="img/i1.png"
-            alt="Woman in hijab cleaning an office desk"
+            alt="Pristine white living room"
           />
         </div>
         <div class="media-item">
@@ -202,18 +158,18 @@
           <img src="img/i4.png" alt="Cleaner in a kitchen wiping a range hood" />
         </div>
         <div class="media-item">
-          <img src="img/i5.png" alt="Two cleaners mopping a living room floor" />
+          <img src="img/i2.png" alt="Woman in hijab cleaning an office desk" />
         </div>
         <div class="media-item">
           <img
             src="https://media.istockphoto.com/id/1055221704/photo/young-woman-washing-window.jpg?s=1024x1024&w=is&k=20&c=SkwsHfYsSS1Fm8DLPE65RQ1crDosut6XdTtNVuYGmt0="
-            alt="Close-up of a cleaning spray bottle"
+            alt="Woman washing a window"
           />
         </div>
       </div>
     </section>
 
-    <section id="testimonials" class="container">
+    <section id="testimonials" class="container section">
       <h2>What Our Clients Say</h2>
       <div class="testimonial-grid">
         <div class="testimonial-card">
@@ -270,38 +226,6 @@
       </div>
     </section>
 
-    <section id="videos" class="container">
-      <h2>🎥 Our Cleaning in Action</h2>
-      <div class="media-grid">
-        <div class="media-item video-card">
-          <video controls poster="img/i1.png">
-            <source src="video/j1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-title">Deep Cleaning - Living Room</div>
-        </div>
-        <div class="media-item video-card">
-          <video
-            controls
-            poster="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=600&h=440&fit=crop"
-          >
-            <source src="video/j4.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-title">Office Sanitization</div>
-        </div>
-        <div class="media-item video-card">
-          <video
-            controls
-            poster="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=440&fit=crop"
-          >
-            <source src="video/j3.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-title">After Party Clean-up</div>
-        </div>
-      </div>
-    </section>
   </main>
 
     <footer class="footer">
@@ -314,6 +238,32 @@
                 <a href="faq.html">FAQ</a>
                 <a href="team.html">Team</a>
                 <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-links">
+                <a
+                  href="https://www.instagram.com/world_of_shine810/"
+                  target="_blank"
+                  title="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.tiktok.com/@world.of.shine.cl?lang=en"
+                  target="_blank"
+                  title="TikTok"
+                  ><i class="fab fa-tiktok"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61574581764671"
+                  target="_blank"
+                  title="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a
+                  href="https://wa.me/971568260687"
+                  target="_blank"
+                  title="WhatsApp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
             </div>
             <p>&copy; 2025 World of Shine. All Rights Reserved.</p>
             <p>Directed By Muhammad Azan Azam</p>

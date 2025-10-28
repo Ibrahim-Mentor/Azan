@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Modal open/close logic
+    // Modal open/close logic (will be unused but is harmless)
     document.querySelectorAll("[data-modal-target]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const modal = document.getElementById(btn.dataset.modalTarget);
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // WhatsApp booking function
+    // WhatsApp booking function (will be unused but is harmless)
     window.sendToWhatsApp = function(event) {
       event.preventDefault();
 
@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const message = `🧹 *New Booking Request*%0A
-👤 *Name:* ${encodeURIComponent(name)}%0A
-📞 *Phone:* ${encodeURIComponent(phone)}%0A
-🧼 *Service:* ${encodeURIComponent(service)}%0A
-📅 *Date:* ${encodeURIComponent(date)}%0A
-📍 *Address & Notes:* ${encodeURIComponent(notes)}`;
+      const message = `ｧｹ *New Booking Request*%0A
+側 *Name:* ${encodeURIComponent(name)}%0A
+到 *Phone:* ${encodeURIComponent(phone)}%0A
+ｧｼ *Service:* ${encodeURIComponent(service)}%0A
+套 *Date:* ${encodeURIComponent(date)}%0A
+桃 *Address & Notes:* ${encodeURIComponent(notes)}`;
 
       const whatsappNumber = "971568260687"; // Your WhatsApp number here
       const url = `https://wa.me/${whatsappNumber}?text=${message}`;
