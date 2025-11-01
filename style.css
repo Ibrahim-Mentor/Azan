@@ -292,7 +292,7 @@ body.dark-mode .hero-content .subtitle {
 }
 
 /* ------------------------- */
-/* --- Services Section --- */
+/* --- Services Section (Accordion) --- */
 /* ------------------------- */
 .services-grid {
     display: grid;
@@ -306,23 +306,65 @@ body.dark-mode .hero-content .subtitle {
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-color);
-    padding: 30px;
+    /* padding: 30px; <-- REMOVED from here to apply to summary/content */
 }
 
-.service-card:hover {
+.service-card:not([open]):hover {
      transform: translateY(-5px);
      box-shadow: var(--shadow-hover);
 }
 
-.service-card h3 {
-    margin-bottom: 15px;
+.service-card[open] {
+    box-shadow: var(--shadow-hover);
+}
+
+.service-card summary {
+    font-weight: 600;
+    padding: 30px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    list-style: none; /* Hide default arrow */
+}
+
+.service-card summary::-webkit-details-marker {
+    display: none; /* Hide default arrow for Chrome/Safari */
+}
+
+.service-card summary h3 {
+    margin: 0;
     color: var(--primary-color);
 }
 
-.service-card p {
+/* This is the + icon */
+.service-card summary::after {
+    content: '\f067'; /* Font Awesome Plus */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    color: var(--primary-color);
+}
+
+/* This is the X icon when open */
+.service-card[open] > summary::after {
+    transform: translateY(-50%) rotate(45deg);
+    content: '\f00d'; /* Font Awesome Times */
+}
+
+.service-card[open] > summary {
+     border-bottom: 1px solid var(--border-color);
+}
+
+.service-card p,
+.service-card .package-details {
+    padding: 20px 30px 30px 30px; /* Add padding to content */
     font-size: 0.95rem;
     line-height: 1.7;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .package-details strong {
@@ -330,6 +372,7 @@ body.dark-mode .hero-content .subtitle {
     margin-top: 15px;
     color: var(--text-color);
 }
+
 
 /* ------------------------- */
 /* --- Why Choose Us Section --- */
