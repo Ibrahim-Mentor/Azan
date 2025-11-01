@@ -309,6 +309,9 @@ body.dark-mode .hero-content .subtitle {
     border: 8px solid var(--border-color);
     padding: 35px;
         transition: all 0.3s ease;
+    /* Added to help position the button */
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -324,14 +327,97 @@ body.dark-mode .hero-content .subtitle {
 .service-card p {
     font-size: 0.95rem;
     line-height: 1.7;
-    margin-bottom: 0;
+    margin-bottom: 0; /* Changed from 20px */
 }
+
+/* === NEW STYLES FOR LISTS INSIDE CARDS === */
+.service-card .card-content ul {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.service-card .card-content ul ul {
+    list-style: '• '; /* Add bullets for nested lists */
+    padding-left: 20px;
+    margin: 5px 0 10px 0;
+}
+
+.service-card .card-content strong {
+    display: block;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+/* ========================================= */
+
 
 .package-details strong {
     display: block;
     margin-top: 15px;
     color: var(--text-color);
 }
+
+/* ---------------------------------- */
+/* --- NEW COLLAPSIBLE CARD STYLES --- */
+/* ---------------------------------- */
+
+.service-card .card-content {
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.4s ease-out;
+}
+
+/* Collapsed state (4 lines) */
+.service-card .card-content.collapsed {
+    /* This height is based on your styles:
+      font-size: 0.95rem (approx 15.2px)
+      line-height: 1.7
+      (15.2px * 1.7) * 4 lines = ~103px. 
+      We'll use 105px to be safe.
+    */
+    max-height: 105px; 
+}
+
+/* Fades out the bottom of collapsed text */
+.service-card .card-content.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, var(--surface-color));
+}
+/* Hide fade for dark mode */
+body.dark-mode .service-card .card-content.collapsed::after {
+     background: linear-gradient(to bottom, transparent, var(--surface-color));
+}
+
+/* "Show More / Show Less" button */
+.toggle-content-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 15px; /* Adds space above the button */
+    text-align: left;
+    align-self: flex-start; /* Aligns button to the left */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.toggle-content-btn:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------- */
+/* --- END OF NEW STYLES --- */
+/* ---------------------------------- */
+
 
 /* ------------------------- */
 /* --- Why Choose Us Section --- */
