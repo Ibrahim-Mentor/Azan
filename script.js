@@ -23,25 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
           });
     }
 
-    // --- NEW --- Accordion logic for service rates
-    const accordions = document.querySelectorAll('.service-accordion');
-
-    if (accordions.length > 0) {
-        accordions.forEach(accordion => {
-            accordion.addEventListener('toggle', (event) => {
-                // This event fires when <details> is opened or closed
-                if (accordion.open) {
-                    // If this one was just opened, close all others
-                    accordions.forEach(otherAccordion => {
-                        if (otherAccordion !== accordion && otherAccordion.open) {
-                            otherAccordion.open = false;
-                        }
-                    });
-                }
-            });
-        });
-    }
-    // --- END NEW ---
 
     // WhatsApp booking function (will be unused but is harmless)
     window.sendToWhatsApp = function(event) {
