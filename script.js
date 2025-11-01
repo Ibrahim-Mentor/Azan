@@ -73,8 +73,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // === NEW "SHOW MORE/LESS" SCRIPT START ===
     // =============================================
 
-    const lineLimit = 4; // Set your line/item limit here
-    const approxLineHeight = 105; // Set the max-height in pixels (from your CSS)
+    const lineLimit = 4;
+    const collapsedHeight = "105px"; // Must match your CSS .collapsed max-height
+    const approxLineHeight = 105; 
+    
+    // Store all collapsible cards to manage them
+    const allCollapsibleCards = [];
 
     document.querySelectorAll('.service-card').forEach(card => {
         const contentWrapper = card.querySelector('.card-content');
@@ -82,41 +86,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let needsButton = false;
 
-        // Check for list content (<ul>)
+        // Check for list content
         const list = contentWrapper.querySelector('ul');
         if (list) {
-            // We count direct children (top-level packages or items)
             const items = list.querySelectorAll(':scope > li');
             if (items.length > lineLimit) {
                 needsButton = true;
             }
         } 
-        // Check for text content (<p>)
+        // Check for text content
         else {
             const text = contentWrapper.querySelector('p');
+            // Check if text's scrollHeight is greater than the collapsed pixel height
             if (text && text.scrollHeight > approxLineHeight) {
                 needsButton = true;
             }
         }
 
-        // If the content is too long, add the button and collapse it
         if (needsButton) {
-            // 1. Add 'collapsed' class
+            // 1. Set initial collapsed state
             contentWrapper.classList.add('collapsed');
+            contentWrapper.style.maxHeight = collapsedHeight; // Set initial height
 
             // 2. Create and add the button
             const button = document.createElement('button');
             button.className = 'toggle-content-btn';
             button.textContent = 'Show More';
-            card.appendChild(button); // Add button to the card
+            card.appendChild(button);
 
-            // 3. Add click event to toggle
+            // 3. Store this card's elements
+            allCollapsibleCards.push({ wrapper: contentWrapper, btn: button });
+
+            // 4. Add click event listener
             button.addEventListener('click', () => {
-                if (contentWrapper.classList.contains('collapsed')) {
+                const isCollapsed = contentWrapper.classList.contains('collapsed');
+
+                // --- This is the new "one at a time" logic ---
+                // First, close all other cards
+                allCollapsibleCards.forEach(item => {
+                    if (item.wrapper !== contentWrapper) { // Don't close the one we just clicked
+                        item.wrapper.classList.add('collapsed');
+                        item.wrapper.style.maxHeight = collapsedHeight;
+                        item.btn.textContent = 'Show More';
+                    }
+                });
+                // --- End of new logic ---
+
+                // Now, toggle the card that was clicked
+                if (isCollapsed) {
+                    // Open it
                     contentWrapper.classList.remove('collapsed');
+                    // Set max-height to its full scrollable height
+                    contentWrapper.style.maxHeight = contentWrapper.scrollHeight + "px";
                     button.textContent = 'Show Less';
                 } else {
+                    // Close it
                     contentWrapper.classList.add('collapsed');
+                    contentWrapper.style.maxHeight = collapsedHeight;
                     button.textContent = 'Show More';
                 }
             });
@@ -126,5 +152,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // =============================================
     // === NEW "SHOW MORE/LESS" SCRIPT END ===
     // =============================================
-
 });

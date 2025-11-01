@@ -299,6 +299,7 @@ body.dark-mode .hero-content .subtitle {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    align-items: start; /* <-- IMPORTANT FIX: Stops cards from stretching */
 }
 
 .service-card {
